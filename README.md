@@ -1,8 +1,9 @@
 # eventur
 
 Statisk site for **eventur** – udflugt, eventyr, sammenhold, læring og fællesskab i
-naturen. Vi sover i telthængekøjer, løber natteløb, skyder med luftgevær og spiller
-bow combat. eventur er arvtageren efter foreningen Foretagsomheden og Skarresø
+naturen. Vi sover i telthængekøjer, rister kaffe over bål, spiller bow combat, går
+naturvandring med Anemette Olesen, hugger med økse med Daniel Rasmussen og løber
+natteløb. eventur er arvtageren efter foreningen Foretagsomheden og Skarresø
 Festival – Danmarks Byggefestival.
 
 Sitet er bygget med [Vite](https://vite.dev) og hostes som rene filer. Der er ingen
@@ -61,6 +62,13 @@ skrifter og afstande er tokens øverst i `site.css`. Skrifterne er Fraunces
 - Links med `data-lysboks="gruppe"` åbner i lysboksen; `data-note` bliver billedtekst.
   `data-video="/sti.mp4"` åbner en video.
 - Formularer med `data-mailto-form="adresse"` validerer og åbner brugerens mailklient.
+
+### Mærker
+
+Hvert eventyr har et rundt mærke i spejderstil. De genereres af
+`tools/generer-maerker.py`, som skriver inline-fragmenter til `src/partials/maerker/`
+og selvstændige SVG-filer til `public/assets/img/maerker/`. Ret farver, tekster eller
+ikoner i scriptet og kør `python tools/generer-maerker.py`.
 
 ### Billeder
 

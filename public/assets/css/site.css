@@ -300,10 +300,11 @@ em.haand, .haand {
   display: flex; align-items: flex-end; color: var(--pergament); background: var(--skov-2);
   isolation: isolate; text-decoration: none;
 }
+/* 7 kort: 7+5 / 4+4+4 / 6+6 */
 .akt:nth-child(1) { grid-column: span 7; }
 .akt:nth-child(2) { grid-column: span 5; }
-.akt:nth-child(3) { grid-column: span 5; }
-.akt:nth-child(4) { grid-column: span 7; }
+.akt:nth-child(3), .akt:nth-child(4), .akt:nth-child(5) { grid-column: span 4; min-height: 440px; }
+.akt:nth-child(6), .akt:nth-child(7) { grid-column: span 6; }
 .akt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1.2s var(--ease); }
 .akt::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
@@ -325,9 +326,63 @@ em.haand, .haand {
 .akt--illu .akt__nr { color: var(--pergament); }
 .akt--illu .akt__illu { position: absolute; inset: 0; z-index: -1; display: grid; place-items: center; padding-bottom: 120px; }
 .akt--illu .akt__illu svg { width: min(70%, 320px); opacity: .95; }
+.akt img.akt__badge {
+  position: absolute; inset: 16px 16px auto auto; z-index: 1; object-fit: contain;
+  width: clamp(78px, 7vw, 100px); height: auto;
+  transform: rotate(8deg); filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .35));
+  transition: transform .5s var(--ease);
+}
+.akt:hover img.akt__badge { transform: rotate(-4deg) scale(1.08); }
+@media (max-width: 1060px) and (min-width: 861px) {
+  .akt:nth-child(3), .akt:nth-child(4), .akt:nth-child(5) { grid-column: span 6; }
+  .akt:nth-child(5) { grid-column: 1 / -1; }
+}
 @media (max-width: 860px) {
   .akt { grid-column: 1 / -1 !important; min-height: 400px; }
 }
+
+/* ---------- Mærker og ruten ---------- */
+.maerke { display: block; width: 100%; height: auto; }
+.rute { position: relative; display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(8px, 1.4vw, 20px); padding-top: 10px; }
+.rute__spor {
+  position: absolute; left: 4%; right: 4%; top: 40px; width: 92%; height: 140px; overflow: visible; pointer-events: none;
+}
+.rute__spor path { fill: none; stroke: var(--glod-2); stroke-width: 3; stroke-dasharray: 2 12; stroke-linecap: round; opacity: .7; vector-effect: non-scaling-stroke; }
+.rute__post { position: relative; text-align: center; text-decoration: none; color: var(--pergament); display: block; }
+.rute__post:nth-child(odd) { margin-top: 56px; }
+.rute__post .maerke {
+  max-width: 156px; margin: 0 auto 14px; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .4));
+  transition: transform .5s var(--ease);
+}
+.rute__post:nth-child(3n) .maerke { transform: rotate(-6deg); }
+.rute__post:nth-child(3n+1) .maerke { transform: rotate(5deg); }
+.rute__post:hover .maerke, .rute__post:focus-visible .maerke { transform: rotate(0) scale(1.08) translateY(-4px); }
+.rute__post h3 { font-size: clamp(1rem, 1.25vw, 1.2rem); margin: 0 0 .2em; }
+.rute__post p { font-size: .82rem; line-height: 1.35; color: rgba(243, 236, 221, .7); margin: 0; }
+@media (max-width: 1000px) {
+  .rute { grid-template-columns: repeat(4, 1fr); row-gap: 36px; }
+  .rute__spor { display: none; }
+  .rute__post:nth-child(odd) { margin-top: 0; }
+}
+@media (max-width: 560px) {
+  .rute { grid-template-columns: repeat(2, 1fr); }
+  .rute__post:last-child { grid-column: 1 / -1; max-width: 50%; justify-self: center; }
+}
+
+/* Instruktører uden foto: mærket står i stedet for portrættet */
+.vaert__maerke { width: min(240px, 70%); margin: 0 auto 1.4rem; }
+.vaert__maerke .maerke { filter: drop-shadow(0 12px 22px rgba(27, 26, 22, .3)); transform: rotate(-4deg); }
+.vaerter.vaerter--to { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; }
+@media (max-width: 860px) { .vaerter.vaerter--to { grid-template-columns: 1fr; max-width: 420px; } }
+
+/* Illustrerede flader på aktivitetssiden */
+.illu-flade--brun { background: radial-gradient(circle at 70% 30%, #9a6440, #7a4a2c 45%, #4a2a16); }
+.illu-flade--groen { background: radial-gradient(circle at 70% 30%, #557a5f, #3d5e47 45%, #22392a); }
+.illu-flade--okker { background: radial-gradient(circle at 70% 30%, #c79043, #a8742a 45%, #6f4a14); }
+.illu-flade .maerke { width: 56%; filter: drop-shadow(0 16px 30px rgba(0, 0, 0, .35)); }
+.detalje__billede .illu-flade .haand { bottom: auto; top: 18px; }
+.detalje__maerke { width: 84px; float: right; margin: 0 0 12px 16px; transform: rotate(6deg); }
+.detalje__maerke img { width: 100%; height: auto; }
 
 /* ---------- Værdier (fem ord) ---------- */
 .vaerdier { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
