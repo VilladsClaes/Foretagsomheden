@@ -730,3 +730,21 @@ em.haand, .haand {
 .mt-l { margin-top: clamp(40px, 5vw, 64px); }
 .lille { font-size: .9rem; color: var(--sten); }
 .nul-top { padding-top: 0; }
+
+/* "Har du nogensinde …" – spørgsmål fra Foretagsomhedens gamle foredrag */
+.spoergsmaal { list-style: none; margin: 0 auto; padding: 0; max-width: 980px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; }
+.spoergsmaal li {
+  font-family: var(--f-display); font-size: clamp(1.2rem, 1.8vw, 1.55rem); line-height: 1.3;
+  padding: 18px 0 18px 46px; border-bottom: 1px dashed rgba(243, 236, 221, .25); position: relative;
+}
+.spoergsmaal li::before {
+  content: ""; position: absolute; left: 0; top: 20px; width: 26px; height: 26px; border-radius: 6px;
+  border: 2px solid var(--glod-2); transform: rotate(-4deg);
+}
+@media (max-width: 760px) { .spoergsmaal { grid-template-columns: 1fr; } }
+
+/* Arkivskuffen på Historien-siden */
+.arkivskuffe { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(18px, 3vw, 40px); align-items: start; }
+.arkivskuffe .polaroid img { aspect-ratio: 3 / 4; object-fit: cover; }
+.arkivskuffe .polaroid:first-child img { object-fit: contain; background: #fff; }
+@media (max-width: 860px) { .arkivskuffe { grid-template-columns: repeat(2, 1fr); } }
