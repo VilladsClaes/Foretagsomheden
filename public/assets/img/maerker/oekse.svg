@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="maerke" viewBox="0 0 200 200" role="img" aria-label="Mærke: Øksehugning – med daniel" style="--maerke-farve:#a8742a">
+<defs><path id="mt-oekse" d="M21 100a79 79 0 0 1 158 0"/><path id="mb-oekse" d="M10 100a90 90 0 0 0 180 0"/></defs>
+<circle cx="100" cy="100" r="99" fill="#6f4a14"/>
+<circle cx="100" cy="100" r="94" fill="none" stroke="#fbf7ee" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+<circle cx="100" cy="100" r="71" fill="#a8742a"/>
+<circle cx="100" cy="100" r="74.5" fill="none" stroke="#fbf7ee" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+<text fill="#fbf7ee" font-family="Instrument Sans, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="2.2" text-anchor="middle"><textPath href="#mt-oekse" startOffset="50%">ØKSEHUGNING</textPath></text>
+<text fill="#fbf7ee" font-family="Instrument Sans, Arial, sans-serif" font-weight="700" font-size="11.5" letter-spacing="2" text-anchor="middle" opacity=".85"><textPath href="#mb-oekse" startOffset="50%">MED DANIEL</textPath></text>
+<circle cx="19" cy="100" r="2.5" fill="#fbf7ee"/><circle cx="181" cy="100" r="2.5" fill="#fbf7ee"/>
+<g fill="none" stroke="#fbf7ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M62 118v20q38 14 76 0v-20"/><ellipse cx="100" cy="118" rx="38" ry="11"/>
+<ellipse cx="100" cy="118" rx="16" ry="4" stroke-width="3"/><path d="M96 106L66 56" stroke-width="6"/></g>
+<path d="M80 104l26-17 12 22q-12 10-28 9z" fill="#fbf7ee"/><g fill="#fbf7ee"><rect x="134" y="80" width="10" height="5" rx="1" transform="rotate(-30 139 82)"/><rect x="142" y="98" width="8" height="4" rx="1" transform="rotate(20 146 100)"/><rect x="124" y="66" width="7" height="4" rx="1" transform="rotate(50 127 68)"/></g>
+</svg>

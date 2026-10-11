@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="maerke" viewBox="0 0 200 200" role="img" aria-label="Mærke: Bow Combat – skumpil &amp; mod" style="--maerke-farve:#e0602a">
+<defs><path id="mt-bow" d="M21 100a79 79 0 0 1 158 0"/><path id="mb-bow" d="M10 100a90 90 0 0 0 180 0"/></defs>
+<circle cx="100" cy="100" r="99" fill="#a83e14"/>
+<circle cx="100" cy="100" r="94" fill="none" stroke="#fbf7ee" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+<circle cx="100" cy="100" r="71" fill="#e0602a"/>
+<circle cx="100" cy="100" r="74.5" fill="none" stroke="#fbf7ee" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+<text fill="#fbf7ee" font-family="Instrument Sans, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="2.2" text-anchor="middle"><textPath href="#mt-bow" startOffset="50%">BOW COMBAT</textPath></text>
+<text fill="#fbf7ee" font-family="Instrument Sans, Arial, sans-serif" font-weight="700" font-size="11.5" letter-spacing="2" text-anchor="middle" opacity=".85"><textPath href="#mb-bow" startOffset="50%">SKUMPIL &amp; MOD</textPath></text>
+<circle cx="19" cy="100" r="2.5" fill="#fbf7ee"/><circle cx="181" cy="100" r="2.5" fill="#fbf7ee"/>
+<g fill="none" stroke="#fbf7ee" stroke-linecap="round" stroke-linejoin="round"><path d="M62 58q84-6 80 84" stroke-width="6"/><path d="M62 58l80 84" stroke-width="2" opacity=".75"/>
+<path d="M66 136l52-52" stroke-width="5"/><path d="M66 136l-12 2 2-12M66 136l-4-13M66 136l13 4" stroke-width="4"/></g><circle cx="124" cy="78" r="10" fill="#fbf7ee"/>
+</svg>
